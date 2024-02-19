@@ -1,12 +1,12 @@
 const articleStory = document.querySelector(`article#story`);
 
+if (articleStory.lenght >= 1) {
 function packAccordion() {
   const accordionButtons = articleStory.querySelectorAll(`[id^="accordion"]`);
   const accordionItem = articleStory.querySelectorAll(
     `[aria-labelledby^="accordion"]`
   );
 
-  // ACCORDION
 
   for (let i = 0; i < accordionButtons.length; i++) {
     const element = accordionButtons[i];
@@ -26,8 +26,6 @@ function packAccordion() {
 function packTabs() {
   const tabsButtons = articleStory.querySelectorAll(`.tabs-buttons`);
   const tabsItems = articleStory.querySelectorAll(`.tabs-items`);
-  console.log(tabsButtons);
-  console.log(tabsItems);
 
   for (let iA = 0; iA < tabsButtons.length; iA++) {
     const elementA = tabsButtons[iA];
@@ -81,3 +79,4 @@ function packCycle() {
 packAccordion();
 packTabs();
 packCycle();
+}
